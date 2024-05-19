@@ -68,5 +68,5 @@ jobs:
         with:
           app-name: 'wauwie-frontend'
           slot-name: 'Production'
-          package: .
+          package: ./reactproject
           
