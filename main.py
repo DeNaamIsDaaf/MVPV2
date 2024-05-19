@@ -49,10 +49,10 @@ async def read_patients(db: Session = Depends(get_db)):
 Base.metadata.create_all(bind=engine)
 
 
-# hardcoded to see if connection works
-if __name__ == "__main__": # (run main.py directly to make this work)
-    db = SessionLocal()
-    patient = Patient(name="John Doe", age=30, gender="Male")
-    db.add(patient)
-    db.commit()
-    db.close()
+# # hardcoded to see if connection works
+# if __name__ == "__main__": # (run main.py directly to make this work)
+#     db = SessionLocal()
+#     patient = Patient(name="John Doe", age=30, gender="Male")
+#     db.add(patient)
+#     db.commit()
+#     db.close()
