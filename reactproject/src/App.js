@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const fetchPatients = async () => {
-      const response = await fetch('http://wauwie-mvpv2.azurewebsites.net/patients/');
+      const response = await fetch('https://wauwie-mvpv2.azurewebsites.net/patients/');
       const data = await response.json();
       setPatients(data);
     };
@@ -22,7 +22,7 @@ function App() {
     const patient = { name, age, gender };
 
     // Send a POST request to your backend
-    const response = await fetch('http://wauwie-mvpv2.azurewebsites.net/patients/', {
+    const response = await fetch('https://wauwie-mvpv2.azurewebsites.net/patients/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ function App() {
     console.log(data);
 
     // Fetch the updated list of patients
-    const response2 = await fetch('http://wauwie-mvpv2.azurewebsites.net/patients/');
+    const response2 = await fetch('https://wauwie-mvpv2.azurewebsites.net/patients/');
     const data2 = await response2.json();
     setPatients(data2);
   };
