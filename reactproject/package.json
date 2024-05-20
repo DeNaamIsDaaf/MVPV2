@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:prod": "serve -s build -l 8080",
+    "start:prod": "serve -s build -l tcp://0.0.0.0:${PORT:-8080}",
     "build": "react-scripts build",
     "postinstall": "npm run build",
     "test": "react-scripts test",
